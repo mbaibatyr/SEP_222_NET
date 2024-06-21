@@ -13,7 +13,7 @@ namespace Server
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StartServer();
+            StartServer2();
         }
 
         async Task StartServer()
@@ -58,7 +58,12 @@ namespace Server
                 }
             });
         }
-    }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StartServer();
+        }
+
 
         async Task StartServer2()
         {
@@ -89,6 +94,7 @@ namespace Server
                 }
             });
         }
+
 
 
     }
