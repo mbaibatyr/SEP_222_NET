@@ -33,9 +33,6 @@ namespace Client
                 sender.Shutdown(SocketShutdown.Both);
                 sender.Close();
             });
-
-
-
         }
     }
 }

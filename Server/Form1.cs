@@ -20,7 +20,6 @@ namespace Server
         {
             await Task.Run(() =>
             {
-
                 var ip = Dns.GetHostEntry(tbHost.Text);
                 var ad = ip.AddressList[0];
                 var ep = new IPEndPoint(ad, int.Parse(tbPort.Text));
@@ -44,7 +43,7 @@ namespace Server
                     handler.Shutdown(SocketShutdown.Both);
                     handler.Close();
                 }
-            })
+            });
         }
     }
 }
