@@ -36,6 +36,7 @@
             listBox1 = new ListBox();
             label3 = new Label();
             tbMessage = new TextBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -109,11 +110,22 @@
             tbMessage.TabIndex = 12;
             tbMessage.Text = "Hello STEP";
             // 
+            // button2
+            // 
+            button2.Location = new Point(360, 374);
+            button2.Name = "button2";
+            button2.Size = new Size(137, 23);
+            button2.TabIndex = 14;
+            button2.Text = "SendToTCPServer";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(531, 507);
+            Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(tbMessage);
             Controls.Add(button1);
@@ -138,5 +150,6 @@
         private ListBox listBox1;
         private Label label3;
         private TextBox tbMessage;
+        private Button button2;
     }
 }

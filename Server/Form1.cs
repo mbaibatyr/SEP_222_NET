@@ -28,7 +28,7 @@ namespace Server
 
                     // запуск слушателя
                     tcpListener.Start();
-
+                    listBox1.Items.Add("Слушаем.... ");
                     while (true)
                     {
                         TcpClient client = tcpListener.AcceptTcpClient();
