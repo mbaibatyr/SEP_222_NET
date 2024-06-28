@@ -20,6 +20,7 @@ namespace UdpCLient
             var data = Encoding.UTF8.GetBytes("hello step");
             Client.Send(data, data.Length, GetLocalIPAddress(), 8001);
         }
+
         public static string GetLocalIPAddress()
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());
