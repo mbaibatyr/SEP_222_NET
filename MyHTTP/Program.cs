@@ -73,3 +73,16 @@ namespace MyHTTP
         }
     }
 }
+
+/*
+ <html>
+<body>
+<form action="http://localhost:12345/" method="post">
+	<input type='text' id='id' name='id' value='1'/>
+	<input type='text' id='name' name='name' value='almaty'/>
+	<input type='submit'/>
+</form>
+</body>
+</html>
+ 
+ */
