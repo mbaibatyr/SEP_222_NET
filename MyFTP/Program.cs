@@ -1,4 +1,5 @@
 ﻿using FluentFTP;
+using Renci.SshNet;
 using System.Net;
 using static System.Net.WebRequestMethods;
 
@@ -20,9 +21,33 @@ namespace MyFTP
             var status = client.UploadFile("123.txt", "/07/19/123kdadkadakdaskdjasklj.txt");
             ;
         }
+
+        static void SFTP()
+        {
+            string Host = "test.rebex.net";
+            int Port = 22;
+            string LocalDestinationFilename = "123.txt";
+            string Username = "demo";
+            string Password = "password";
+
+            using (var sftp = new SftpClient(Host, Port, Username, Password))
+            {
+                sftp.Connect();
+
+                var files = sftp.ListDirectory("//");
+
+                foreach (var file in files)
+                {
+                    Console.WriteLine(file.Name);
+                }
+                sftp.Disconnect();
+            }
+        }
+
         static void Main(string[] args)
         {
-            FTP_test();
+            //FTP_test();
+            SFTP();
         }
     }
 }
