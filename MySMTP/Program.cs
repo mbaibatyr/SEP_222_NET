@@ -12,6 +12,7 @@ namespace MySMTP
 
     public class MailSend
     {
+        //https://help.mail.ru/mail/mailer/popsmtp/
         public static void Send()
         {
             try
@@ -20,8 +21,8 @@ namespace MySMTP
                 mail.IsBodyHtml = true;
                 mail.From = new MailAddress("murat_b@mail.ru");
                 mail.To.Add("dinash6145@mail.ru");
-                mail.Subject = "test666";
-                mail.Body = "body666";
+                mail.Subject = "test666-----";
+                mail.Body = "body666----";
                 using (System.Net.Mail.SmtpClient server = new System.Net.Mail.SmtpClient("smtp.mail.ru", 587))
                 {
                     server.UseDefaultCredentials = false;
