@@ -1,4 +1,8 @@
-﻿using System.Net.Mail;
+﻿using MailKit;
+using MailKit.Net.Imap;
+using MailKit.Search;
+using MailKit.Security;
+using System.Net.Mail;
 
 namespace MySMTP
 {
@@ -6,7 +10,8 @@ namespace MySMTP
     {
         static void Main(string[] args)
         {
-            MailSend.Send();
+            //MailSend.Send();
+            MailKit.Start();
         }
     }
 
@@ -97,6 +102,32 @@ namespace MySMTP
             {
                 //logger.Error(err.Message);
                 //return "error: " + err.Message;
+            }
+        }
+
+    }
+
+    public class MailKit
+    {
+        public static void Start()
+        {
+            using (var client = new ImapClient())
+            {
+                
+                client.Connect("imap.mail.ru", 993, true);
+                client.Authenticate("murat_b@mail.ru", "");
+                client.Inbox.Open(FolderAccess.ReadWrite);
+                var ns = client.GetFolder("INBOX");                                
+                //IMailFolder inbox = client.GetFolder("Test");
+                //inbox.Open(FolderAccess.ReadWrite);
+                var uids = ns.Search(SearchQuery.All);
+                foreach (var uid in uids)
+                {
+                    var message = ns.GetMessage(uid);
+                
+                    Console.WriteLine(message.Subject);
+                }
+                
             }
         }
     }
