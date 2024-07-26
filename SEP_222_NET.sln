@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyHTTP", "MyHTTP\MyHTTP.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTTP_Client", "HTTP_Client\HTTP_Client.csproj", "{3F093807-B6AE-4BA2-8FDF-D37B0C4FD8E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFTP", "MyFTP\MyFTP.csproj", "{38F57669-BBE7-4ADA-B8D1-80BB4F6525EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFTP", "MyFTP\MyFTP.csproj", "{38F57669-BBE7-4ADA-B8D1-80BB4F6525EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySMTP", "MySMTP\MySMTP.csproj", "{74F99EBC-01BA-4D28-858F-445EB4295609}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{38F57669-BBE7-4ADA-B8D1-80BB4F6525EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38F57669-BBE7-4ADA-B8D1-80BB4F6525EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38F57669-BBE7-4ADA-B8D1-80BB4F6525EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F99EBC-01BA-4D28-858F-445EB4295609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F99EBC-01BA-4D28-858F-445EB4295609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F99EBC-01BA-4D28-858F-445EB4295609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F99EBC-01BA-4D28-858F-445EB4295609}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
